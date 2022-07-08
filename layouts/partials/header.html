@@ -1,7 +1,11 @@
 <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="{{ .Site.BaseURL | relLangURL }}">
-      {{ .Site.Title }}
+      {{ if .Site.Params.logoURL }}
+        <img src="{{ .Site.Params.logoURL | relURL }}" alt="logo" height="40">
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
     </a>
     {{ if or .Site.Menus.main .Site.IsMultiLingual }}
       <input type="checkbox" id="menu-toggle" />
