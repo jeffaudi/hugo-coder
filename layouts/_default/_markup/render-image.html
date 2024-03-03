@@ -1,0 +1,7 @@
+<img src="{{ .Destination | safeURL }}" width="100%"
+{{- with .Text }} alt="{{ . }}"{{ end -}}
+{{- with .Title }} title="{{ . }}"{{ end -}}
+><div style="text-align: center;"><span style="font-size: 16px; color:grey;">
+{{- with .Text }}{{ . }}{{ end -}}
+{{- with .Title }}{{ . }}{{ end -}}
+</span></div>
